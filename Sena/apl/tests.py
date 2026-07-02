@@ -9,7 +9,7 @@ class PruebaBasica(TestCase):
     def test_crear_categoria(self):
         """prueba basica de base de datos en memoria"""
         #las consultas e imserciones van dentro de las funciones
-        Categoria.object.create(nombre='Frijol')
+        Categoria = Categoria.object.create(nombre='Frijol')
         consulta = Categoria.objects.filter(nombre='Frijol')
         self.assertTrue(consulta.exists())
     
